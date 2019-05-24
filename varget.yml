@@ -1,0 +1,10 @@
+---
+#how to get the variable with user input
+
+ - hosts: webserver
+   vars_prompt:
+    name: var1
+    prompt: Enter the value
+   tasks:
+   - debug:
+      msg: "{{ var1 }}"

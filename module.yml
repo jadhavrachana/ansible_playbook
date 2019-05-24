@@ -1,0 +1,11 @@
+---
+#modularization
+
+ - name: Modularization
+   hosts: webserver
+   gather_facts: False
+   vars_files:
+    - var.yml
+   tasks:
+    - include:
+       tasks.yml

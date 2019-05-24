@@ -1,0 +1,11 @@
+---
+#Loop example
+
+ - hosts: webhost
+   tasks:
+    - command:
+         mkdir /tmp/"{{ item }}"
+      with_items:
+       - mydir1
+       - mydir2
+       - mydir3

@@ -1,0 +1,12 @@
+---
+
+ - name: play for async task
+   hosts: webserver
+   tasks:
+    - name: task1
+      command: sleep 60
+      async: 70
+      poll: 35
+    - name: task2
+      command: touch /tmp/async.txt
+    

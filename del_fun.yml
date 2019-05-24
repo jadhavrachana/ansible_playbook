@@ -1,0 +1,8 @@
+---
+#delegation function
+
+ - hosts: all
+   tasks:
+    - command:
+        touch /tmp/delegation_f.txt
+      delegate_to: host2

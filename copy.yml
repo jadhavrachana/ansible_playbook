@@ -1,0 +1,18 @@
+---
+#This is my first playbook
+
+ - hosts: webserver
+   tasks:
+    - copy:
+       src: /root/test.txt
+       dest: /root/rachana
+ - hosts: webhost
+   tasks:
+    - user:
+        name: glob        
+    - copy:
+       src: /root/test
+       dest: /root/rachana
+       owner: glob
+       group: glob
+       mode: 0664

@@ -1,0 +1,11 @@
+---
+#create the directory
+
+ - hosts: webhost
+   tasks:
+    - command:
+        mkdir my_dir1
+    - command:
+        mkdir my_dir2
+    - command:
+        mkdir my_dir3

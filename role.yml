@@ -1,0 +1,11 @@
+---
+# roles
+
+ - name: This is my first play
+   hosts: webserver
+   roles: 
+    - webserver
+ - name: This is my second play
+   hosts: webhost
+   roles:
+    - webhost 

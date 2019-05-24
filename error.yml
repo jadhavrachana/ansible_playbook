@@ -1,0 +1,9 @@
+---
+
+ - name: error handling 
+   hosts: webserver,webhost
+   tasks:
+    - name: task1
+      command: touch /tmp/Testing/error1.txt
+    - name: task2
+      command : touch /tmp/error2.txt

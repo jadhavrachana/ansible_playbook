@@ -1,0 +1,13 @@
+---
+#playbook for variables
+
+ - hosts: webserver
+   vars:
+    var1: "Hello world"
+    var2: "hi..........."
+   tasks:
+    - copy:
+       dest: /tmp/variable.txt
+       content: "{{ var1 }}"
+    - command:
+        echo "{{ var2 }}" > /root/abc.txt

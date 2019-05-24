@@ -1,0 +1,9 @@
+---
+#Condition stmt
+
+ - hosts: webserver
+   tasks:
+    - copy:
+       dest: /root/condition.txt
+       content: "Hello Playbook"
+      when: true  

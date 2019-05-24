@@ -1,0 +1,7 @@
+---
+#take variable through cmd line
+
+ - hosts: webserver
+   tasks:
+     - debug:
+        msg: '{{ var1 }}'

@@ -1,0 +1,10 @@
+---
+#register module
+
+ - hosts: webhost
+   tasks:
+    - command:
+         touch /tmp/web_response.txt
+      register: response
+    - debug:
+        msg: "{{ response }}"
